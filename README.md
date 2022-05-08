@@ -1,5 +1,6 @@
 # TicketBooking
 Mobilalk projct. Téma: online színházjehy vásárlás.
+
 Kedves Javító!
 
 Ebben a file-ban összegyűjtöttem néhány követelmény megvalósításának helyét, amit esetleg kicsit nehezebb lehet megtalálni. (Az itt nem említett követelmények is értelemszerűen meg vannak valósítva.) 
