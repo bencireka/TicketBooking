@@ -49,7 +49,6 @@ public class RegisterActivity extends AppCompatActivity{
 
         preferences = getSharedPreferences(PREF_KEY, MODE_PRIVATE);
 
-        //Itt vesszük ki a main activity-ben elmentett cuccokat
         String password = preferences.getString("password", "");
 
         passwordET.setText(password);
@@ -90,7 +89,6 @@ public class RegisterActivity extends AppCompatActivity{
                 Log.e(LOG_TAG, "Nem egyenlő jelszó és a megerősítés.");
             } else {
                 Log.i(LOG_TAG, "Regisztrált a következő emailcímmel rendelkező felhasználó: " + email);
-                //TODO: A regisztráció funkcionalitást meg kéne valósítnai.
             }
 
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
