@@ -36,7 +36,7 @@ public class TheatrePlay {
         return title;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+
     /*public String getEarliestDate() {
         LocalDateTime earliest = LocalDateTime.MAX;
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy–MM–dd HH:mm");
@@ -52,9 +52,14 @@ public class TheatrePlay {
     }*/
 
     public String getDate() {
+        return date;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public String getformattedDate(){
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy–MM–dd HH:mm");
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("MM-dd HH:mm");
-        return date;
+        return LocalDateTime.parse(date, formatter1).format(formatter2);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

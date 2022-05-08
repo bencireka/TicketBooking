@@ -4,12 +4,8 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -104,7 +100,7 @@ class TheatrePlayAdapter extends RecyclerView .Adapter<TheatrePlayAdapter.ViewHo
         @RequiresApi(api = Build.VERSION_CODES.O)
         public void bindTo(TheatrePlay currentPlay) {
             mTitleText.setText(currentPlay.getTitle());
-            mDateText.setText(currentPlay.getDate());
+            mDateText.setText(currentPlay.getformattedDate());
             mLocationText.setText(currentPlay.getTheatre().getLocation());
 
             itemView.findViewById(R.id.book_ticket).setOnClickListener(view -> ((BrowsingActivity)context).startBooking(currentPlay));

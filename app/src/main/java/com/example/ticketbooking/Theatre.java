@@ -3,7 +3,7 @@ package com.example.ticketbooking;
 import java.util.ArrayList;
 
 public class Theatre {
-    final private int NAGY_MAX = 428;
+    final private int NAGY_MAX = 524;
     final private int KIS_MAX = 180;
     private int maxCapacity;
     private String location;

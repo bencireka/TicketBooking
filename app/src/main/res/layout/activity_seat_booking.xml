@@ -39,20 +39,6 @@
         app:layout_constraintTop_toBottomOf="@+id/chooseSeatText"
         app:layout_constraintVertical_bias="0.021" />
 
-    <Button
-        android:id="@+id/buyAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:onClick="buyAll"
-        android:text="Összes jegy felvásárlása"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chooseSeatTextView"
-        app:layout_constraintVertical_bias="0.023" />
-
     <TextView
         android:id="@+id/priceTextWarning"
         android:layout_width="match_parent"
@@ -62,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buyAll"
+        app:layout_constraintTop_toBottomOf="@+id/chooseSeatTextView"
         app:layout_constraintVertical_bias="0.036"
         android:onClick="buyAll"/>
 

@@ -42,7 +42,6 @@ public class SeatBookingActivity extends AppCompatActivity{
     private ArrayList<Integer> seatsNotTaken;
     private Button buyButton;
     private Button cancelButton;
-    private Button buyAllButton;
 
     private FirebaseFirestore mFirestore;
     private CollectionReference mTPlays;
@@ -61,7 +60,6 @@ public class SeatBookingActivity extends AppCompatActivity{
         priceText = findViewById(R.id.priceText);
         buyButton = findViewById(R.id.buy_ticket);
         cancelButton = findViewById(R.id.cancel);
-        buyAllButton = findViewById(R.id.buyAll);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -190,13 +188,13 @@ public class SeatBookingActivity extends AppCompatActivity{
 
     }
 
-    public void buyAll(View view) {
-        currentIndexes.clear();
-        Animation animation = AnimationUtils.loadAnimation(SeatBookingActivity.this, R.anim.bounce);
-        buyAllButton.startAnimation(animation);
-        for(int i=0; i<seatsNotTaken.size(); i++){
-            currentIndexes.add(seatsNotTaken.get(i));
-        }
-        priceText.setText("Have you really thought about this!");
-    }
+   // public void buyAll(View view) {
+     //   currentIndexes.clear();
+       // Animation animation = AnimationUtils.loadAnimation(SeatBookingActivity.this, R.anim.bounce);
+        //buyAllButton.startAnimation(animation);
+        //for(int i=0; i<seatsNotTaken.size(); i++){
+        //    currentIndexes.add(seatsNotTaken.get(i));
+        //}
+        //priceText.setText("Have you really thought about this!");
+    //}
 }
